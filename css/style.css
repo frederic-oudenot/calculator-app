@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+html{
+  --main-background:hsl(222, 26%, 31%);
+  --keypad-background:hsl(223, 31%, 20%);
+  --screen-background:hsl(224, 36%, 15%);
+
+  --key-background1:hsl(225, 21%, 49%);
+  --key-shadow1:hsl(224, 28%, 35%);
+
+  --key-background2: hsl(6, 63%, 50%);
+  --key-shadow2:hsl(6, 70%, 34%);
+
+  --text:hsl(221, 14%, 31%);
+  --text-opt:hsl(0, 0%, 100%);
+
+  --bckg-color : var(--main-background);
+  --text-color: var(--text);
+  --text-option:var(--text-opt);
+
+  --bckg-screen : var(--screen-background);
+  --bckg-button-important : var(--key-background2);
+  --bckg-shadow-button-important:var(--key-shadow2);
+  
+  --bckg-under-button:var(--keypad-background);
+  --bckg-shadow-button:var(--key-shadow1);
+}
+
+body{
+  background-color: var(--bckg-color);
+  color:var(--text-option);
+  font-weight: 700px;
+  font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+}
+
+#calculator{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap:1rem;
+
+  margin: 10% auto;
+  width:30rem;
+}
+
+.calculator__header{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+
+}
+
+.calculator__header--title{
+  width: 80%;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.calculator__header--theme{
+  width:40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.calculator__header--theme .background{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  background-color: var(--bckg-screen);
+  border-radius: 1rem;
+  padding: .2rem;
+}
+
+.calculator__header--theme button{
+  cursor: pointer;
+  height:.7rem;
+  border-style: none;
+  border-radius: 1rem;
+  border-color: black 1px solid;
+}
+
+.calculator__header--theme .hidden{
+  background-color: var(--bckg-screen);
+}
+
+.calculator__header--theme .show{
+  background-color: var(--bckg-button-important);
+}
+
+.calculator__screen{
+  position: relative;
+  background-color: var(--bckg-screen);
+  border-radius: 1rem;
+  width:100%;
+  height:100px;
+
+}
+
+.calculator__screen--write{
+  overflow-x: auto;
+  position: absolute;
+  text-align: right;
+  font-size:3rem;
+  width:100%;
+
+  padding:1.5rem;
+}
+
+.calculator__buttons{
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+
+  background-color: var(--bckg-under-button);
+  width:100%;
+  border-radius: .5rem;
+  padding:1rem;
+}
+
+.calculator__buttons--create{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.calculator__buttons--btn{  
+  cursor: pointer;
+  background-color:hsl(30, 25%, 89%);
+  box-shadow: 1px solid hsl(28, 16%, 65%);
+  color:hsl(221, 14%, 31%);
+  border-radius: .5rem;
+  padding:.3rem 1rem;
+  width:6rem;
+
+  font-size:2rem;
+}
+
+.--btn_reset,.--btn_equal{
+  border-radius: .5rem;
+  padding:.3rem 1rem;
+  width:13rem;
+
+  font-size:2rem;
+}
+
+.--btn_del, .--btn_reset{
+  background-color:var(--bckg-color);
+  box-shadow: 1px solid var(--bckg-shadow-button);
+  color:var(--text-option);
+}
+
+.--btn_equal{
+  background-color: var(--bckg-button-important);
+  box-shadow: 1px solid var(--bckg-shadow-button-important);
+  color:var(--text-option);
+}
+
+.theme-1-grey{
+  --main-background:hsl(222, 26%, 31%);
+  --keypad-background:hsl(223, 31%, 20%);
+  --screen-background:hsl(224, 36%, 15%);
+
+  --key-background1:hsl(225, 21%, 49%);
+  --key-shadow1:hsl(224, 28%, 35%);
+
+  --key-background2: hsl(6, 63%, 50%);
+  --key-shadow2:hsl(6, 70%, 34%);
+
+  --text:hsl(221, 14%, 31%);
+  --text-opt:hsl(0, 0%, 100%);
+}
+
+.theme-2-light{
+  --main-background:hsl(0, 0%, 90%);
+  --keypad-background:hsl(0, 5%, 81%);
+  --screen-background:hsl(0, 0%, 93%);
+
+  --key-background1:hsl(185, 42%, 37%);
+  --key-shadow1:hsl(45, 7%, 89%);
+
+  --key-background2: hsl(25, 98%, 40%);
+  --key-shadow2:hsl(35, 11%, 61%);
+
+  --text-opt:hsl(60, 10%, 19%);
+  --text:hsl(0, 0%, 100%);
+}
+
+.theme-3-insane{
+  --main-background:hsl(268, 75%, 9%);
+  --keypad-background:hsl(268, 71%, 12%);
+  --screen-background:hsl(268, 71%, 12%);
+
+  --key-background1:hsl(281, 89%, 26%);
+  --key-shadow1:hsl(285, 91%, 52%);
+
+  --key-background2: hsl(176, 100%, 44%);
+  --key-shadow2:hsl(177, 92%, 70%);
+
+  --text:hsl(52, 100%, 62%);
+  --text-option:hsl(0, 0%, 100%);
+}
+
+a{
+  text-decoration: none;
+  color:var(--text-option);
+}
+
+footer{
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom:2rem;
+}
